@@ -1,13 +1,13 @@
+import DisplayControls from './DisplayControls.js';
+import CardGallery from './CardGallery.js';
+
 const CardDisplay = () => {
     return (
         <main>
-            <h1></h1>
+            <h2></h2>
             <section>
-                <div className="displayControls">
-                    <button></button>
-                    <button></button>
-                </div>
-                <div className="cardGallery"></div>
+                <DisplayControls />
+                <CardGallery />
             </section>
         </main>
     )

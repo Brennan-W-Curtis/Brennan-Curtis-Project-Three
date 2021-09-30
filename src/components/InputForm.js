@@ -1,28 +1,14 @@
-const InputForm = props => {
+const InputForm = () => {
     return (
-        <main>
-            <section>
-                <div className="displayControls">
-                    <button></button>
-                    <button></button>
-                </div>
-                <div className="displayGraphic">
-                    <div className="randomPair"></div>
-                </div>
-            </section>
-            <section>
-                <h1>Quiz</h1>
-                <h2>Improve your studying</h2>
-                <form action="">
-                    <label htmlFor=""></label>
-                    <input type="text" />
-                    <label htmlFor=""></label>
-                    <input type="text" />
-                    <div className="cardQuantity"></div>
-                    <button type="submit"></button>
-                </form>
-            </section>
-        </main>
+        <form action="">
+            <label htmlFor="question" className="sr-only">Question</label>
+            <input type="text" name="question" className="question" id="question" placeholder="Please enter a question." />
+            <label htmlFor="answer" className="sr-only">Answer</label>
+            <input type="text" name="answer" className="answer" id="answer" placeholder="Please enter the corresponding answer." />
+            <div className="cardQuantity">
+            </div>
+            <button type="submit">Submit</button>
+        </form>
     )
 }
 

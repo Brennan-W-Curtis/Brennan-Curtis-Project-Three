@@ -1,0 +1,23 @@
+form {
+    display: flex;
+    flex-direction: column;
+    font-family: $primaryFont;
+
+    input {
+        border: none;
+    }
+
+    button {
+        background-color: $primaryColour;
+        color: white;
+        transition: .5s all;
+        cursor: pointer;
+
+        &:hover {
+            background-color: white;
+            color: $primaryColour;
+        }
+
+    }
+
+}

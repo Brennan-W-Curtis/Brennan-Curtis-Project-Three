@@ -1,23 +1,25 @@
 import { useEffect, useState } from 'react';
+import { getDatabase } from "firebase/database";
+import './styles/sass/styles.css'
 import Header from './components/Header.js';
-import InputForm from './components/InputForm.js';
+import HomePage from './components/HomePage.js';
 import CardDisplay from './components/CardDisplay.js';
 import Footer from './components/Footer.js';
 
-const App = () => {
-  const [ displayForm, setDisplayForm ] = useState(true);
-  // Create a boolean variable in state that determines whether the form is rendered or the list of data pairs
-    // Render a form to the page that allows the user to submit a question and answer and store each pair in state
-    // Render a mechanism of visual feedback that informs the user of their stored data pairs
-      // Give the user the ability to delete previously stored data pairs
-    // Create an element that renders a random data pair   
+// Create a funtion that changes the state and pass that as a prop to components 
 
+const App = () => {
+  // Store a boolean value in state that determines what content will render to the page
+  const [ displayForm, setDisplayForm ] = useState(true);
+  // Store an array of objects in state that will retain data pairs of question and answers between user sessions
+  const [ dataPairs, setDataPairs ] = useState([]);
   return (
     <>
       <Header />
+      {/* Render either the input form or the card gallery depending on whether the displayForm value in state is true or false */}
       {
         displayForm ?
-        <InputForm /> :
+        <HomePage /> :
         <CardDisplay />
       }
       <Footer />

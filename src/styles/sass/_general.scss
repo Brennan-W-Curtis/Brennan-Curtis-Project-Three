@@ -1,3 +1,4 @@
+// Utility Styles
 body, h1, h2, h3, ul, li, p, a { margin: 0; padding: 0; }
 
 ul { list-style: none; }
@@ -9,3 +10,22 @@ img { max-width: 100%; }
 html { font-size: 125%; }
 
 .wrapper { width: 90%; max-width: 1080px; margin: 0 auto; }
+
+// General Styling
+h1, 
+h2 {
+    font-family: $secondaryFont;
+    color: $secondaryColour;
+}
+
+p,
+a,
+input,
+button {
+    font-family: $primaryFont;
+}
+
+// Code Debugging
+// * {
+//     border: 1px solid red;
+// }

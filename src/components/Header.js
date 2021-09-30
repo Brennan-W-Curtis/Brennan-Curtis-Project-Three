@@ -1,7 +1,9 @@
 const Header = () => {
     return (
         <header>
-            <p>Hello</p>
+            <div className="wrapper">
+                <p>Neuromancy</p>
+            </div>
         </header>
     )
 }
