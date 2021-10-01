@@ -1,8 +1,11 @@
+// <i class="fas fa-brain"></i>
+// <i class="fas fa-magic"></i>
+
 const Header = () => {
     return (
         <header>
             <div className="wrapper">
-                <p>Neuromancy</p>
+                <h1>Neuromancy</h1>
             </div>
         </header>
     )

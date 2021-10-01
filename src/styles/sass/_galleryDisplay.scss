@@ -1,0 +1,43 @@
+.galleryMain {
+    background-color: $backgroundColour; 
+    min-height: 90vh; 
+    padding: 1rem 0;     
+}
+
+.galleryHead {
+    display: flex;
+
+    div:nth-child(1),
+    div:nth-child(2) {
+        width: 50%;
+
+        h2 {
+            font-size: 1.5rem;
+        }
+
+    }
+
+}
+
+.cardGallery {
+    
+    ul {
+        display: flex;
+        justify-content: space-evenly;
+        width: 100%;
+        
+        li {
+            display: flex;
+            flex-wrap: wrap;
+            width: calc((100% / 5) - .5rem);
+            margin: 0 .5rem;
+            align-items: center;
+            background-color: white;
+            justify-content: center;
+            border: 1px solid $tertiaryColour;
+            height: 5rem;
+        }
+
+    }
+
+}

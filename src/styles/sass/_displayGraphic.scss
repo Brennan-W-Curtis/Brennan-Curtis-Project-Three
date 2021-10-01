@@ -1,0 +1,16 @@
+.displayGraphic {
+    display: flex;
+    justify-content: center;
+
+    .randomQuestion {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: white;
+        border: 1px solid $tertiaryColour;
+        height: 10rem;
+        width: 72.5%;
+        
+    }
+
+}

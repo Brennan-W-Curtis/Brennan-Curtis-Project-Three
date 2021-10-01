@@ -5,22 +5,29 @@ import DisplayGraphic from './DisplayGraphic.js';
     // Give the user the ability to delete previously stored data pairs
 // Create an element that renders a random data pair 
  
-const HomePage = () => {
+const HomePage = props => {
+    const { displayHomepage, handleSubmit, questionsArray, randomIndex, toggleDisplay } = props;
     return (
         <main className="homeMain">
-            <section>
-                <div className="wrapper">
-                    <DisplayControls />
-                    <DisplayGraphic />
-                </div>
-            </section>
-            <section>
-                <div className="wrapper">
-                    <h1>Neuromancy</h1>
-                    <h2>Hone your mind with practiced thoughts and magical thinking</h2>
-                    <InputForm />
-                </div>
-            </section>
+            <div className="wrapper">
+                <section className="graphicSection">
+                    {/* When the user clicks on the buttons for the display controls a click event fires that changes the state value for displayHomepage */}
+                    <DisplayControls
+                        toggleDisplay={toggleDisplay}
+                        displayHomepage={displayHomepage}
+                    />
+                    <DisplayGraphic
+                        questionsArray={questionsArray} 
+                        randomIndex={randomIndex}
+                    />
+                </section>
+                <section className="formSection">
+                    <h2>Hone your mind with practiced thoughts and magical thinking.</h2>
+                    <InputForm 
+                        handleSubmit={handleSubmit}
+                    />
+                </section>
+            </div>
         </main>
     )
 }

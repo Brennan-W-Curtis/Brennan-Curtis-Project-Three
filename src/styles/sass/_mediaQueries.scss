@@ -1,0 +1,26 @@
+/* Portrait tablet and small desktops */
+@media (max-width: 940px) {
+
+    .homeMain {
+    
+        .wrapper {
+            flex-direction: column;
+
+            .graphicSection,
+            .formSection {
+                width: 100%;
+            }
+
+        }
+
+    }
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 768px) {
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+}
