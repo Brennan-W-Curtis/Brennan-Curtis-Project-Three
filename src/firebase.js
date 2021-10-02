@@ -1,10 +1,10 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from 'firebase/app';
-import { getDatabase, ref, onValue, set } from 'firebase/database';
+// Import the functions to configure and initialize our firebase app.
+import { initializeApp } from "firebase/app";
+// Import the function to pull in the Firebase realtime database service
+import { getDatabase } from 'firebase/database';
 
-// TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries
 // Your web app's Firebase configuration
-const config = {
+const firebaseConfig = {
   apiKey: "AIzaSyCpa0x7UIQYEwMWB6ckwCLQpb4F5Ie2asM",
   authDomain: "neuromancy-73107.firebaseapp.com",
   projectId: "neuromancy-73107",
@@ -14,9 +14,9 @@ const config = {
 };
 
 // Initialize Firebase
-const app = initializeApp(config);
+const app = initializeApp(firebaseConfig);
 
 // Get a to the database
-const database = getDatabase(app);
+const realtime = getDatabase(app);
 
-export default firebase;
+export default realtime;

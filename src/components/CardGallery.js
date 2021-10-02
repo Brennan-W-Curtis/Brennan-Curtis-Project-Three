@@ -1,3 +1,5 @@
+import QuestionCard from './QuestionCard.js';
+
 const CardGallery = props => {
     const { questionsArray } = props;
     return (
@@ -7,7 +9,11 @@ const CardGallery = props => {
                 {
                     questionsArray.map((item, index) => {
                         return (
-                            <li key={index} className="individualCard">{item.question}</li>
+                            <QuestionCard 
+                                key={index}
+                                id={index} 
+                                question={item.question} 
+                            />
                         )
                     })
                 }   

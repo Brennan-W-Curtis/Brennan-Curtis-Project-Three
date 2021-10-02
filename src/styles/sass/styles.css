@@ -280,10 +280,46 @@ button {
 header {
   height: 5vh;
 }
+header .wrapper {
+  display: flex;
+}
+header .wrapper div {
+  position: relative;
+  top: 0.25rem;
+  right: 0.25rem;
+}
+header .wrapper .fas:nth-child(1) {
+  color: #EF233C;
+  font-size: 1.25rem;
+}
+header .wrapper .fas:nth-child(2) {
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  top: 0.25rem;
+  right: 0.3rem;
+}
 header .wrapper h1 {
   font-size: 1rem;
   position: relative;
   top: 0.25rem;
+}
+
+.displayControls {
+  display: flex;
+}
+.displayControls button {
+  background-color: #2B2D42;
+  border: 1px solid white;
+  color: white;
+  min-width: 3.75rem;
+  height: 3.75rem;
+  transition: 0.5s all;
+  cursor: pointer;
+}
+.displayControls button:hover {
+  background-color: white;
+  color: #2B2D42;
 }
 
 .homeMain {
@@ -308,7 +344,7 @@ header .wrapper h1 {
 
 .galleryMain {
   background-color: #EDF2F4;
-  height: 90vh;
+  min-height: 90vh;
   padding: 1rem 0;
 }
 
@@ -331,6 +367,7 @@ header .wrapper h1 {
 }
 .cardGallery ul li {
   display: flex;
+  flex-wrap: wrap;
   width: calc((100% / 5) - .5rem);
   margin: 0 0.5rem;
   align-items: center;
@@ -338,23 +375,6 @@ header .wrapper h1 {
   justify-content: center;
   border: 1px solid #8D99AE;
   height: 5rem;
-}
-
-.displayControls {
-  display: flex;
-}
-.displayControls button {
-  background-color: #2B2D42;
-  border: 1px solid white;
-  color: white;
-  min-width: 3.75rem;
-  height: 3.75rem;
-  transition: 0.5s all;
-  cursor: pointer;
-}
-.displayControls button:hover {
-  background-color: white;
-  color: #2B2D42;
 }
 
 .displayGraphic {
@@ -369,6 +389,21 @@ header .wrapper h1 {
   border: 1px solid #8D99AE;
   height: 10rem;
   width: 72.5%;
+}
+
+li {
+  position: relative;
+}
+li .fas {
+  position: absolute;
+  color: #EF233C;
+  top: 2.5%;
+  right: 2.5%;
+  cursor: pointer;
+  transition: 0.25s all;
+}
+li .fas:hover {
+  transform: scale(1.15);
 }
 
 form {

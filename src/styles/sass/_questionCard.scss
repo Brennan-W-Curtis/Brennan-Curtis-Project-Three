@@ -1,0 +1,18 @@
+li {
+    position: relative;
+
+    .fas {
+        position: absolute;
+        color: $secondaryColour;
+        top: 2.5%;
+        right: 2.5%;
+        cursor: pointer;
+        transition: .25s all;
+
+        &:hover {
+            transform: scale(1.15);
+        }
+
+    }
+
+}

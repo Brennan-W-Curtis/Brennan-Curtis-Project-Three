@@ -2,7 +2,7 @@ import DisplayControls from './DisplayControls.js';
 import CardGallery from './CardGallery.js';
 
 const GalleryDisplay = props => {
-    const { questionsArray, displayHomepage, toggleDisplay } = props;
+    const { displayHomepage, questionsArray, toggleDisplay } = props;
     return (
         <main className="galleryMain">
             <section>
@@ -21,6 +21,9 @@ const GalleryDisplay = props => {
                     <CardGallery 
                         questionsArray={questionsArray}
                     />
+                    <div className="studyControls">
+                        <button className="playButton">Invoke</button>
+                    </div>
                 </div>
             </section>
         </main>

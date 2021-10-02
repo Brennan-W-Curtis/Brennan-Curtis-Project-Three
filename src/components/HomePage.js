@@ -6,7 +6,7 @@ import DisplayGraphic from './DisplayGraphic.js';
 // Create an element that renders a random data pair 
  
 const HomePage = props => {
-    const { displayHomepage, handleSubmit, questionsArray, randomIndex, toggleDisplay } = props;
+    const { answerInput, displayHomepage, handleAnswer, handleQuestion, handleSubmit, questionsArray, questionInput, randomIndex, toggleDisplay } = props;
     return (
         <main className="homeMain">
             <div className="wrapper">
@@ -25,6 +25,10 @@ const HomePage = props => {
                     <h2>Hone your mind with practiced thoughts and magical thinking.</h2>
                     <InputForm 
                         handleSubmit={handleSubmit}
+                        questionInput={questionInput}
+                        handleQuestion={handleQuestion}
+                        answerInput={answerInput}
+                        handleAnswer={handleAnswer}
                     />
                 </section>
             </div>
