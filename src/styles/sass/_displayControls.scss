@@ -10,7 +10,8 @@
         transition: .5s all;
         cursor: pointer;
 
-        &:hover {
+        &:hover,
+        &:focus {
             background-color: white;
             color: $primaryColour;
         }

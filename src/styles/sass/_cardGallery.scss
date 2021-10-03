@@ -1,0 +1,12 @@
+.cardGallery {
+    min-height: 50vh; 
+    margin: 1rem 0;
+    
+    ul {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100%;
+    }
+
+}

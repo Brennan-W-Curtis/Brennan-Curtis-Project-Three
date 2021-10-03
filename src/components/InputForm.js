@@ -8,7 +8,7 @@ const InputForm = props => {
                 name="addQuestion" 
                 className="addQuestion" 
                 id="addQuestion" 
-                placeholder="Question." 
+                placeholder="Question" 
                 onChange={ handleQuestion }
                 value={ questionInput }
             />
@@ -18,7 +18,7 @@ const InputForm = props => {
                 name="addAnswer" 
                 className="addAnswer" 
                 id="addAnswer" 
-                placeholder="Answer."
+                placeholder="Answer"
                 onChange={ handleAnswer } 
                 value={ answerInput }
             />

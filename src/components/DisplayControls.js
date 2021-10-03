@@ -4,8 +4,8 @@ const DisplayControls = props => {
         <div className="displayControls">
             {
                 displayHomepage ?
-                <button onClick={toggleDisplay}>Gallery</button> :
-                <button onClick={toggleDisplay}>Input</button>
+                <button onClick={toggleDisplay}>Codex</button> :
+                <button onClick={toggleDisplay}>Create</button>
             }
         </div>
     )

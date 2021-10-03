@@ -19,8 +19,87 @@
 
 /* Landscape phone to portrait tablet */
 @media (max-width: 768px) {
+
+    .homeMain {
+
+        .displayControls {
+            margin-top: 1rem;
+        }
+   
+        .formSection {
+            width: 100%;
+            margin-top: 1rem;
+    
+            .brandingStatement {
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+    
+        }
+
+    }
+
 }
 
 /* Landscape phones and down */
 @media (max-width: 480px) {
+
+    .homeMain {
+
+        .displayControls {
+            margin-top: 1rem;
+        }
+   
+        .formSection {
+            width: 100%;
+            margin-top: 1rem;
+    
+            .brandingStatement {
+                font-size: 1.25rem;
+                margin-bottom: 1rem;
+                text-align: center;
+                width: 100%;
+            }
+
+            input[type="text"] {
+                width: 100%;
+            }
+
+            button {
+                width: 30%;
+                margin-top: 1rem;
+                padding: .5rem 0;
+            }
+    
+        }
+
+        .graphicSection {
+            width: 100%;
+
+            .randomQuestion {
+                width: 100%;
+                
+            }
+
+        }       
+        
+    }
+
+    .galleryMain {
+
+        .displayControls {
+            margin-top: 1rem;
+        }
+
+        .studyControls {
+
+            .playButton {
+                width: 100%;
+            }
+
+        }
+        
+    }
+
 }

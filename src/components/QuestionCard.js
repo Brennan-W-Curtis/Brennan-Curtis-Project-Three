@@ -1,16 +1,28 @@
 const QuestionCard = props => {
-    const { id, question } = props;
+    const { answer, handleDelete, id, question } = props;
     return (
         <li
             className="individualCard"
             id={id}
         >
-            {question}
-            <i  
-                className="fas fa-window-close" 
-                aria-hidden="true"
-            >
-            </i>
+            <div className="cardInner">
+                <div className="cardFront">
+                    {question}
+                </div>
+                <div className="cardBack">
+                    {answer}
+                </div>
+            </div>
+            <button
+                onClick={() => handleDelete(id)}
+                >
+                <i  
+                    className="fas fa-window-close" 
+                    aria-hidden="true"
+                    title="Delete"
+                    >
+                </i>
+            </button>
         </li>
 
     )

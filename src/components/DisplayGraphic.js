@@ -1,5 +1,4 @@
-const DisplayGraphic = props => {
-    const { questionsArray, randomIndex } = props;
+const DisplayGraphic = () => {
     return (
         <div className="displayGraphic">
             <div className="randomQuestion">

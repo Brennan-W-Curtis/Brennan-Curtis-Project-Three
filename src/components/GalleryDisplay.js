@@ -1,8 +1,9 @@
 import DisplayControls from './DisplayControls.js';
 import CardGallery from './CardGallery.js';
+import StudyControls from './StudyControls.js'
 
 const GalleryDisplay = props => {
-    const { displayHomepage, questionsArray, toggleDisplay } = props;
+    const { displayHomepage, displayModal, handleDelete, questionsArray, toggleDisplay, toggleModal } = props;
     return (
         <main className="galleryMain">
             <section>
@@ -18,12 +19,16 @@ const GalleryDisplay = props => {
                             <h2>Display Gallery</h2>
                         </div>
                     </div>
-                    <CardGallery 
+                    <CardGallery
+                        handleDelete={handleDelete} 
                         questionsArray={questionsArray}
+                        toggleDisplay={toggleDisplay}
                     />
-                    <div className="studyControls">
-                        <button className="playButton">Invoke</button>
-                    </div>
+                    <StudyControls 
+                        questionsArray={questionsArray}
+                        displayModal={displayModal}
+                        toggleModal={toggleModal}
+                    />
                 </div>
             </section>
         </main>
