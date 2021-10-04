@@ -1,16 +1,39 @@
 .displayGraphic {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
 
-    .randomQuestion {
+    .graphicCard {
         display: flex;
+        flex-wrap: wrap;
+        text-align: center;
         align-items: center;
         justify-content: center;
         background-color: white;
         border: 1px solid $tertiaryColour;
         height: 10rem;
-        width: 72.5%;
+        max-width: 20rem;
+        width: 100%;    
+
+        .graphicContent {
+            position: relative;
+            display: flex;
+            transform: scale(3);
+    
+            .fas:nth-child(1) {
+                color: $secondaryColour;
+                font-size: 1.25rem;
+            }
         
+            .fas:nth-child(2) {
+                position: absolute;
+                color: white;
+                font-size: .8rem;
+                top: .25rem;
+                right: .3rem;
+            }
+    
+        }
+
     }
 
 }

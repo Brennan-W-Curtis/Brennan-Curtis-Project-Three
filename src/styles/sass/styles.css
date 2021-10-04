@@ -281,13 +281,17 @@ button {
     margin-top: 1rem;
   }
   .homeMain .formSection {
-    width: 100%;
-    margin-top: 1rem;
+    width: 70%;
+    margin: 1rem auto 0 auto;
   }
   .homeMain .formSection .brandingStatement {
     font-size: 1.25rem;
     margin-bottom: 1rem;
     width: 100%;
+  }
+
+  .galleryMain .studyControls .playButton {
+    width: 20%;
   }
 }
 /* Landscape phones and down */
@@ -298,6 +302,7 @@ button {
   .homeMain .formSection {
     width: 100%;
     margin-top: 1rem;
+    position: relative;
   }
   .homeMain .formSection .brandingStatement {
     font-size: 1.25rem;
@@ -312,14 +317,37 @@ button {
     width: 30%;
     margin-top: 1rem;
     padding: 0.5rem 0;
+    position: relative;
+    left: 70%;
+  }
+  .homeMain .formSection p {
+    font-size: 0.9rem;
   }
   .homeMain .graphicSection {
     width: 100%;
   }
-  .homeMain .graphicSection .randomQuestion {
+  .homeMain .graphicSection .recentQuestion {
     width: 100%;
   }
+  .homeMain .graphicSection p {
+    text-align: center;
+  }
 
+  .galleryMain .galleryHead div:nth-child(1) {
+    width: 40%;
+  }
+  .galleryMain .galleryHead div:nth-child(2) {
+    width: 75%;
+  }
+  .galleryMain .galleryHead .galleryHeadline {
+    font-size: 1.25rem;
+  }
+  .galleryMain .galleryHead p {
+    font-size: 0.8rem;
+  }
+  .galleryMain .questionCounter {
+    font-size: 0.9rem;
+  }
   .galleryMain .displayControls {
     margin-top: 1rem;
   }
@@ -370,6 +398,7 @@ header .wrapper h1 {
 .displayControls button:hover, .displayControls button:focus {
   background-color: white;
   color: #2B2D42;
+  border: 1px solid #2B2D42;
 }
 
 .homeMain {
@@ -394,16 +423,35 @@ header .wrapper h1 {
 
 .displayGraphic {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
 }
-.displayGraphic .randomQuestion {
+.displayGraphic .graphicCard {
   display: flex;
+  flex-wrap: wrap;
+  text-align: center;
   align-items: center;
   justify-content: center;
   background-color: white;
   border: 1px solid #8D99AE;
   height: 10rem;
-  width: 72.5%;
+  max-width: 20rem;
+  width: 100%;
+}
+.displayGraphic .graphicCard .graphicContent {
+  position: relative;
+  display: flex;
+  transform: scale(3);
+}
+.displayGraphic .graphicCard .graphicContent .fas:nth-child(1) {
+  color: #EF233C;
+  font-size: 1.25rem;
+}
+.displayGraphic .graphicCard .graphicContent .fas:nth-child(2) {
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  top: 0.25rem;
+  right: 0.3rem;
 }
 
 form {
@@ -419,7 +467,7 @@ form input {
   border-bottom: 1px solid #8D99AE;
 }
 form button {
-  border: none;
+  border: 1px solid #2B2D42;
   background-color: #2B2D42;
   color: white;
   transition: 0.5s all;
@@ -431,12 +479,21 @@ form button {
 form button:hover, form button:focus {
   background-color: white;
   color: #2B2D42;
+  border: 1px solid #2B2D42;
 }
 
 .galleryMain {
   background-color: #EDF2F4;
   min-height: 90vh;
   padding: 1rem 0;
+}
+.galleryMain .questionCounter {
+  position: relative;
+  top: 1rem;
+}
+.galleryMain span {
+  color: #EF233C;
+  font-weight: 600;
 }
 
 .galleryHead {
@@ -454,6 +511,10 @@ form button:hover, form button:focus {
 .cardGallery {
   min-height: 50vh;
   margin: 1rem 0;
+  border: 1px solid #8D99AE;
+  border-radius: 5px;
+  padding: 1rem;
+  background-color: white;
 }
 .cardGallery ul {
   display: flex;
@@ -507,7 +568,7 @@ li button {
   position: absolute;
   top: -25%;
   right: -15%;
-  background-color: #EDF2F4;
+  background-color: white;
   border: none;
 }
 li button .fas {
@@ -531,13 +592,14 @@ li button .fas:hover, li button .fas:focus {
   border: 1px solid white;
   transition: 0.5s all;
   cursor: pointer;
-  width: 10%;
+  width: 20%;
   margin-top: 1rem;
   padding: 0.5rem 0;
 }
 .studyControls .playButton:hover, .studyControls .playButton:focus {
   background-color: white;
   color: #2B2D42;
+  border: 1px solid #2B2D42;
 }
 
 .modalContainer {
@@ -565,9 +627,25 @@ li button .fas:hover, li button .fas:focus {
   width: 30%;
   height: 15rem;
 }
-.modalContainer p {
+.modalContainer .modalContent p {
   width: 100%;
   text-align: center;
+}
+.modalContainer .modalContent .brandingLogo {
+  position: relative;
+  display: flex;
+  transform: scale(2);
+}
+.modalContainer .modalContent .brandingLogo .fas:nth-child(1) {
+  color: #EF233C;
+  font-size: 1.25rem;
+}
+.modalContainer .modalContent .brandingLogo .fas:nth-child(2) {
+  position: absolute;
+  color: white;
+  font-size: 0.8rem;
+  top: 0.25rem;
+  right: 0.3rem;
 }
 .modalContainer .closeButton {
   position: absolute;
@@ -598,6 +676,7 @@ li button .fas:hover, li button .fas:focus {
 .modalContainer .invokeButton:hover, .modalContainer .invokeButton:focus {
   background-color: white;
   color: #2B2D42;
+  border: 1px solid #2B2D42;
 }
 
 footer {

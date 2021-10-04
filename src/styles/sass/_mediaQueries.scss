@@ -25,15 +25,27 @@
         .displayControls {
             margin-top: 1rem;
         }
-   
+
         .formSection {
-            width: 100%;
-            margin-top: 1rem;
+            width: 70%;
+            margin: 1rem auto 0 auto;
     
             .brandingStatement {
                 font-size: 1.25rem;
                 margin-bottom: 1rem;
                 width: 100%;
+            }
+    
+        }
+
+    }
+
+    .galleryMain {
+
+        .studyControls {
+
+            .playButton {
+                width: 20%;
             }
     
         }
@@ -54,6 +66,7 @@
         .formSection {
             width: 100%;
             margin-top: 1rem;
+            position: relative;
     
             .brandingStatement {
                 font-size: 1.25rem;
@@ -70,6 +83,12 @@
                 width: 30%;
                 margin-top: 1rem;
                 padding: .5rem 0;
+                position: relative;
+                left: 70%;
+            }
+
+            p {
+                font-size: .9rem;
             }
     
         }
@@ -77,9 +96,13 @@
         .graphicSection {
             width: 100%;
 
-            .randomQuestion {
+            .recentQuestion {
                 width: 100%;
                 
+            }
+
+            p {
+                text-align: center;
             }
 
         }       
@@ -87,6 +110,30 @@
     }
 
     .galleryMain {
+
+        .galleryHead {
+
+            div:nth-child(1) {
+                width: 40%;
+            }
+
+            div:nth-child(2) {
+                width: 75%;
+            }
+
+            .galleryHeadline {
+                font-size: 1.25rem;
+            }
+
+            p {
+                font-size: .8rem;
+            }
+
+        }
+
+        .questionCounter {
+            font-size: .9rem;
+        }
 
         .displayControls {
             margin-top: 1rem;

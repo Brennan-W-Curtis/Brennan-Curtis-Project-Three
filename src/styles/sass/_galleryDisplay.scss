@@ -1,7 +1,18 @@
 .galleryMain {
     background-color: $backgroundColour; 
     min-height: 90vh; 
-    padding: 1rem 0;     
+    padding: 1rem 0; 
+
+    .questionCounter {
+        position: relative;
+        top: 1rem;
+    }
+    
+    span {
+        color: $secondaryColour;
+        font-weight: 600;
+    }
+
 }
 
 .galleryHead {

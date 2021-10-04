@@ -19,7 +19,7 @@ const QuestionCard = props => {
                 <i  
                     className="fas fa-window-close" 
                     aria-hidden="true"
-                    title="Delete"
+                    title="Forget"
                     >
                 </i>
             </button>

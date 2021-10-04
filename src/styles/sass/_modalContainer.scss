@@ -22,11 +22,32 @@
         border: 1px solid $primaryColour;
         width: 30%;
         height: 15rem;
-    }
 
-    p {
-        width: 100%;
-        text-align: center;
+        p {
+            width: 100%;
+            text-align: center;
+        }
+
+        .brandingLogo {
+            position: relative;
+            display: flex;
+            transform: scale(2);
+
+            .fas:nth-child(1) {
+                color: $secondaryColour;
+                font-size: 1.25rem;
+            }
+        
+            .fas:nth-child(2) {
+                position: absolute;
+                color: white;
+                font-size: .8rem;
+                top: .25rem;
+                right: .3rem;
+            } 
+
+        } 
+
     }
 
     .closeButton {
@@ -65,6 +86,7 @@
         &:focus {
             background-color: white;
             color: $primaryColour;
+            border: 1px solid $primaryColour;
         }
 
     }

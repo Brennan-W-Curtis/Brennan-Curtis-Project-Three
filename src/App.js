@@ -9,20 +9,16 @@ import Footer from './components/Footer.js';
 
 // Question: - Should I create a separate module and move all of the functions I've declared there?
 // Question: - My use of a second ternary expression prevents the user from accessing the card gallery which is intented but throws an error to the console, should I address this?
-// Reminder: - Render a different display controls or disable changing state if the dataPairs state value is 0.
-// Reminder: - If the user deletes the last card in the gallery it should change the displayHomepage state value to true.
-// Features: - When the invoke button is pressed a function is called that displays a modal with a random question. The user is able to progress
-            // through all the questions saved to state with view questions being removed from the list of remaining available questions. They are
-            // able to progress forward when clicking on a chevron button.
-// Features: - Render a random question to the display graphic component.
-// Features: - Upon load a message in a modal should appear on screen to inform the user what the application's purpose is to add context to the
-            // flowery language.  
+// Reminder: - Style the modal to make it conform with a responsive design. 
+// Reminder: - There seems to be a bug where if the database isn't fast enough when updating the state it breaks a component.
 
 const App = () => {
   // Store a boolean value in state that determines what content will render to the page
   const [ displayHomepage, setDisplayHomepage ] = useState(true);
   // Store a boolean value in state that determines whether the modal is visible to the user
   const [ displayModal, setDisplayModal ] = useState(false);
+  // Store a boolean value in state that determines whether a question will be replaced by it's answer in the modal
+  const [ displayAnswer, setDisplayAnswer ] = useState(false);
   // Store an array of objects in state that will retain data pairs of question and answers between user sessions
   const [ dataPairs, setDataPairs ] = useState([]);
   // Store the user's input from the form in state
@@ -47,22 +43,22 @@ const App = () => {
       setDataPairs(questionsArray);
     })
   }, [])
-  // Create a function expression that toggles between displaying the homepage and the card gallery
+  // Declare a function expression that toggles between displaying the homepage and the card gallery
   const toggleDisplay = () => {
     const toggleHomepage = displayHomepage;
     // Sets the toggleHomepage value to the opposite and saves it to state
     setDisplayHomepage(!toggleHomepage);
   }
-  // Create a function expression that toggles between displaying the modal from the card gallery
+  // Declare a function expression that toggles between displaying the modal from the card gallery
   const toggleModal = () => {
     const toggleModal = displayModal;
     setDisplayModal(!toggleModal);
   }
-  // Create a function expression that monitors the current value entered by the user in the question input
+  // Declare a function expression that monitors the current value entered by the user in the question input
   const handleQuestion = event => {
     setQuestionInput(event.target.value);
   }
-  // Create a function expression that monitors the current value entered by the user in the answer input
+  // Declare a function expression that monitors the current value entered by the user in the answer input
   const handleAnswer = event => {
     setAnswerInput(event.target.value);
   }
@@ -87,15 +83,29 @@ const App = () => {
       alert("Please ensure you've input text in both the question and answer fields before submitting.")
     }
   }
-  // Declare a function that deletes the selected card from the gallery when called by a click event
+  // Declare a function expression that deletes the selected card from the gallery when called by a click event
   const handleDelete = questionId => {
     const specifiedRef = ref(realtime, questionId);
     remove(specifiedRef);
   }
-  // Declare a function that returns a random number based on the length of an array
-  const randomNumber = array => {
+  // Declare a function expression that returns a random number based on the length of an array
+  const generateRandom = array => {
     const randomNumber = Math.floor(Math.random() * array.length);
     return randomNumber;
+  }
+  // Declare a function expression that will store a random number in state
+  const handleRandom = questionsArray => {
+    let randomNumber = generateRandom(questionsArray);
+    // A conditional statement that prevents numbers from being used to setState more than once in a row
+    if (randomIndex === randomNumber) {
+      randomNumber = generateRandom(questionsArray);
+    }
+    setRandomIndex(randomNumber)
+  }
+  // Declare a function expression that will determine whether a question or it's answer will be rendered to the modal
+  const handleReveal = () => {
+    let answerVisible = displayAnswer
+    setDisplayAnswer(!answerVisible);
   }
   return (
     <>
@@ -104,23 +114,28 @@ const App = () => {
       {
         displayHomepage ?
         <HomePage
+          answerInput={answerInput}
           // Pass state boolean value that determines what content will render to the page 
           displayHomepage={displayHomepage}
-          handleSubmit={handleSubmit}
-          questionInput={questionInput}
-          handleQuestion={handleQuestion}
-          answerInput={answerInput}
           handleAnswer={handleAnswer}
+          handleQuestion={handleQuestion}
+          handleSubmit={handleSubmit}
+          questionsArray={dataPairs}
+          questionInput={questionInput}
           // Pass function that will toggle which component will be rendered along with it's content
           toggleDisplay={toggleDisplay}
         /> :
         <GalleryDisplay
+          displayAnswer={displayAnswer}
+          displayHomepage={displayHomepage}
+          displayModal={displayModal}
           handleDelete={handleDelete}
+          handleRandom={handleRandom}
+          handleReveal={handleReveal}
           // Pass the state array object that contains all of the data pairs that will render to the gallery 
           questionsArray={dataPairs}
-          displayHomepage={displayHomepage}
+          randomIndex={randomIndex}
           toggleDisplay={toggleDisplay}
-          displayModal={displayModal}
           toggleModal={toggleModal}
         />
       }

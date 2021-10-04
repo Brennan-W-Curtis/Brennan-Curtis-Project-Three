@@ -22,7 +22,7 @@ const InputForm = props => {
                 onChange={ handleAnswer } 
                 value={ answerInput }
             />
-            <button type="submit">Submit</button>
+            <button type="submit">Inscribe</button>
         </form>
     )
 }
