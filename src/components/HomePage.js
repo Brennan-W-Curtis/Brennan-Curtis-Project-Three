@@ -12,6 +12,7 @@ const HomePage = props => {
                         displayHomepage={displayHomepage}
                         toggleDisplay={toggleDisplay}
                     />
+                    {/* Displays the most recent question to have been recorded by a user. */}
                     <DisplayGraphic 
                         questionsArray={questionsArray}
                     />

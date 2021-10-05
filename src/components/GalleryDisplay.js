@@ -10,6 +10,7 @@ const GalleryDisplay = props => {
                 <div className="wrapper">
                     <div className="galleryHead">
                         <div>
+                            {/* Controls whether the homepage or gallery displays. */}
                             <DisplayControls 
                                 displayHomepage={displayHomepage}
                                 toggleDisplay={toggleDisplay}
@@ -21,11 +22,13 @@ const GalleryDisplay = props => {
                         </div>
                     </div>
                     <p className="questionCounter">You currently have <span>{questionsArray.length}</span> spells in your codex.</p>
+                    {/* Renders a complete list of all questions for the user to review. */}
                     <CardGallery
                         handleDelete={handleDelete} 
                         questionsArray={questionsArray}
                         toggleDisplay={toggleDisplay}
                     />
+                    {/* Controls which determine whether the modal displays. */}
                     <StudyControls 
                         displayAnswer={displayAnswer}
                         displayModal={displayModal}

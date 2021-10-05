@@ -14,6 +14,7 @@ const ModalContainer = props => {
                     </i>
                 </button>
                 {
+                    // If the boolean value stored in state evaluate to true than it will display the answer based upon the randomIndex value in state, will render a button that changes the number stored in randomIndex, and toggles the value stored within displayAnswer.  
                     displayAnswer ?
                         <>
                             <p>{ questionsArray[randomIndex].answer }</p>
@@ -25,6 +26,7 @@ const ModalContainer = props => {
                                 }}
                             >Next</button>
                         </> :
+                        // Otherwise it will render a question based upon the randomIndex value in state and a button that will toggle the value stored within displayAnswer.
                         <>
                             <p>{ questionsArray[randomIndex].question }</p>
                             <button 
