@@ -7,9 +7,6 @@ import HomePage from './components/HomePage.js';
 import GalleryDisplay from './components/GalleryDisplay.js';
 import Footer from './components/Footer.js';
 
-// Reminder: - Potential error handling feature, is to limit the number of characters a user can input to prevent interface from breaking.
-// Reminder: - Potential error handling feature, determine a way to render a different prompt on the display graphic is the questionsArray is empty.
-
 const App = () => {
   // All values that are stored within state
   const [ displayHomepage, setDisplayHomepage ] = useState(true);
