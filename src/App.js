@@ -61,14 +61,18 @@ const App = () => {
   const handleSubmit = event => {
     event.preventDefault();
     if (answerInput && questionInput) {
-      const dbRef = ref(realtime)
-      const dataPair = {
-        question: questionInput,
-        answer: answerInput
-      } 
-      push(dbRef, dataPair);
-      setAnswerInput("");
-      setQuestionInput("");
+      if (answerInput.includes(" ") && questionInput.includes(" ")) {
+        const dbRef = ref(realtime)
+        const dataPair = {
+          question: questionInput,
+          answer: answerInput
+        } 
+        push(dbRef, dataPair);
+        setAnswerInput("");
+        setQuestionInput("");
+      } else {
+        alert("Please ensure that your question and answer include at least one space.")
+      }
     } else {
       alert("Please ensure you've input text in both the question and answer fields before submitting.")
     }

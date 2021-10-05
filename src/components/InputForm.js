@@ -8,6 +8,7 @@ const InputForm = props => {
                 name="addQuestion" 
                 className="addQuestion" 
                 id="addQuestion" 
+                maxLength={ 50 }
                 placeholder="Question" 
                 onChange={ handleQuestion }
                 value={ questionInput }
@@ -19,6 +20,7 @@ const InputForm = props => {
                 className="addAnswer" 
                 id="addAnswer" 
                 placeholder="Answer"
+                maxLength={ 50 }
                 onChange={ handleAnswer } 
                 value={ answerInput }
             />
