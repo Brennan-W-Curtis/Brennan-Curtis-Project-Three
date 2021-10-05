@@ -5,12 +5,38 @@
     
         .wrapper {
             flex-direction: column;
+            height: auto;
 
             .graphicSection,
             .formSection {
                 width: 100%;
             }
 
+            .brandingStatement {
+                width: 60%;
+                font-size: 1.25rem;
+            }
+
+        }
+
+    }
+
+    .formSection {
+        margin: 1rem auto 0 auto;
+
+        button {
+            position: relative;
+            width: 20%;
+            left: 80%;
+        }
+
+    }
+
+    .graphicSection {
+
+        .graphicCard {
+            margin: 0 auto;
+            padding: 1rem;
         }
 
     }
@@ -22,20 +48,39 @@
 
     .homeMain {
 
-        .displayControls {
-            margin-top: 1rem;
-        }
-
         .formSection {
             width: 70%;
-            margin: 1rem auto 0 auto;
-    
+
             .brandingStatement {
                 font-size: 1.25rem;
-                margin-bottom: 1rem;
-                width: 100%;
+                margin: 0 auto;
+                width: 80%;
             }
-    
+
+            p {
+                width: 80%;
+                margin: 0 auto;
+                font-size: .9rem;
+            }
+
+            form {
+                width: 80%;
+                margin: 0 auto;
+            }
+
+            button {
+                width: 30%;
+                left: 70%;
+            }
+
+        }
+
+        .graphicSection {
+
+            .graphicText {
+                font-size: .9rem;
+            }
+
         }
 
     }
@@ -65,13 +110,13 @@
    
         .formSection {
             width: 100%;
-            margin-top: 1rem;
             position: relative;
     
             .brandingStatement {
-                font-size: 1.25rem;
-                margin-bottom: 1rem;
-                text-align: center;
+                width: 100%;
+            }
+
+            form {
                 width: 100%;
             }
 
@@ -88,6 +133,7 @@
             }
 
             p {
+                width: 100%;
                 font-size: .9rem;
             }
     
@@ -95,16 +141,6 @@
 
         .graphicSection {
             width: 100%;
-
-            .recentQuestion {
-                width: 100%;
-                
-            }
-
-            p {
-                text-align: center;
-            }
-
         }       
         
     }
@@ -147,6 +183,22 @@
 
         }
         
+    }
+
+    .modalContainer {
+
+        .modalContent {
+            
+            p {
+                font-size: .9rem;
+            }
+
+            .invokeButton {
+                width: 70%;
+            }
+
+        }
+
     }
 
 }

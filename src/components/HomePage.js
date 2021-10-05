@@ -8,7 +8,6 @@ const HomePage = props => {
         <main className="homeMain">
             <div className="wrapper">
                 <section className="graphicSection">
-                    {/* When the user clicks on the buttons for the display controls a click event fires that changes the state value for displayHomepage */}
                     <DisplayControls
                         displayHomepage={displayHomepage}
                         toggleDisplay={toggleDisplay}

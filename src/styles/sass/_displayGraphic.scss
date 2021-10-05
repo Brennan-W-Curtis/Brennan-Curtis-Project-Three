@@ -9,6 +9,7 @@
         align-items: center;
         justify-content: center;
         background-color: white;
+        position: relative;
         border: 1px solid $tertiaryColour;
         height: 10rem;
         max-width: 20rem;
@@ -17,6 +18,7 @@
         .graphicContent {
             position: relative;
             display: flex;
+            bottom: 1rem;
             transform: scale(3);
     
             .fas:nth-child(1) {
@@ -32,6 +34,11 @@
                 right: .3rem;
             }
     
+        }
+
+        .graphicText {
+            position: absolute;
+            top: 7rem;
         }
 
     }

@@ -9,7 +9,6 @@ const StudyControls = props => {
                 onClick={toggleModal}
             >Invoke</button>
             {
-                // If displayModal's value is true it will display the modal if it's false it will render a react fragment
                 displayModal ?
                 <ModalContainer
                     displayAnswer={displayAnswer}

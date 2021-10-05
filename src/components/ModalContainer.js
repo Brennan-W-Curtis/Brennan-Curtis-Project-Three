@@ -13,12 +13,7 @@ const ModalContainer = props => {
                         >
                     </i>
                 </button>
-                <div className="brandingLogo">
-                    <i className="fas fa-brain" aria-hidden="true"></i>
-                    <i className="fas fa-magic" aria-hidden="true"></i>
-                </div>
                 {
-                    // If the displayAnswer value is true than it will display the question's answer and a button to render the next question
                     displayAnswer ?
                         <>
                             <p>{ questionsArray[randomIndex].answer }</p>
